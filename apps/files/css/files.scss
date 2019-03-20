@@ -200,7 +200,7 @@ table.multiselect th .columntitle {
 }
 table th .columntitle.name {
 	padding-left: 0;
-	margin-left: 50px;
+	margin-left: 60px;
 }
 
 table th .sort-indicator {
@@ -504,7 +504,8 @@ a.action > img {
 
 /* Actions for selected files */
 .selectedActions {
-    position: relative;
+	position: absolute;
+	top: 0;
     display: inline-block;
     vertical-align: middle;
 }
