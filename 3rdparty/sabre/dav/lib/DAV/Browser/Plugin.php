@@ -444,7 +444,7 @@ class Plugin extends DAV\ServerPlugin {
 </head>
 <body>
     <header>
-        <div class="logo">
+        <div class="">
             <a href="$vars[baseUrl]"><img src="$vars[logo]" alt="sabre/dav" /> $vars[title]</a>
         </div>
     </header>

@@ -122,6 +122,7 @@ if expr "$1" : "apache" 1>/dev/null || [ "$1" = "php-fpm" ] || [ "${NEXTCLOUD_UP
         #upgrade
         else
             run_as 'php /var/www/html/occ upgrade'
+            run_as 'php occ maintenance:mimetype:update-js'
 
             run_as 'php /var/www/html/occ app:list' | sed -n "/Enabled:/,/Disabled:/p" > /tmp/list_after
             echo "The following apps have been disabled:"

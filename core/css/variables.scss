@@ -39,7 +39,7 @@ $color-main-background-translucent: rgba($color-main-background, .97) !default;
 $color-background-dark: nc-darken($color-main-background, 7%) !default;
 $color-background-darker: nc-darken($color-main-background, 14%) !default;
 
-$color-primary: #0082c9 !default;
+$color-primary: #2C7D16 !default;
 $color-primary-text: #ffffff !default;
 // do not use nc-darken/lighten in case of overriding because
 // primary-text is independent of color-main-text

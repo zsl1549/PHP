@@ -31,7 +31,7 @@
 				<?php if ($_['bodyid'] === 'body-login' ): ?>
 					<header role="banner">
 						<div id="header">
-							<div class="logo">
+							<div class="">
 								<h1 class="hidden-visually">
 									<?php p($theme->getName()); ?>
 								</h1>
@@ -50,7 +50,7 @@
 		</div>
 		<footer role="contentinfo">
 			<p class="info">
-				<?php print_unescaped($theme->getLongFooter()); ?>
+				
 			</p>
 		</footer>
 	</body>

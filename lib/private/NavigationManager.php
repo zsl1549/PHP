@@ -146,6 +146,14 @@ class NavigationManager implements INavigationManager {
 		$activeApp = $this->getActiveEntry();
 		if ($activeApp !== null) {
 			foreach ($list as $index => &$navEntry) {
+				if ($navEntry['id'] == "firstrunwizard-about") {
+					unset($list[$index]);
+					continue;
+				}
+				if ($navEntry['id'] == "help") {
+					unset($list[$index]);
+					continue;
+				}
 				if ($navEntry['id'] == $activeApp) {
 					$navEntry['active'] = true;
 				} else {
