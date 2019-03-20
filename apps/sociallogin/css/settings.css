@@ -1,0 +1,36 @@
+#sociallogin_settings input {
+  width: 285px;
+}
+#sociallogin_settings .provider-settings {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 15px;
+  margin-bottom: 20px;
+}
+.provider-settings .openid-remove,
+.provider-settings .custom_oidc-remove,
+.provider-settings .custom_oauth2-remove   {
+  float: right;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 16px;
+  width: 20px;
+  text-align: center;
+}
+#openid_provider_tpl,
+#custom_oidc_provider_tpl,
+#custom_oauth2_provider_tpl {
+  display: none !important;
+}
+input[readonly] {
+  background-color: #ebebeb;
+  color: rgba(0, 0, 0, 0.4);
+}
+.section h2.provider-title {
+  margin-bottom: 10px;
+}
+.provider-title img {
+  width: 20px;
+  height: 20px;
+  margin-bottom: -2px;
+}

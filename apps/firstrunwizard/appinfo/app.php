@@ -21,5 +21,5 @@
  *
  */
 
-$app = new \OCA\FirstRunWizard\AppInfo\Application();
-$app->register();
+// $app = new \OCA\FirstRunWizard\AppInfo\Application();
+// $app->register();
