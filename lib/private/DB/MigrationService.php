@@ -500,26 +500,26 @@ class MigrationService {
 			try {
 				$sourceTable = $sourceSchema->getTable($table->getName());
 			} catch (SchemaException $e) {
-				if (\strlen($table->getName()) - $prefixLength > 27) {
+				if (\strlen($table->getName()) - $prefixLength >37) {
 					throw new \InvalidArgumentException('Table name "'  . $table->getName() . '" is too long.');
 				}
 				$sourceTable = null;
 			}
 
 			foreach ($table->getColumns() as $thing) {
-				if ((!$sourceTable instanceof Table || !$sourceTable->hasColumn($thing->getName())) && \strlen($thing->getName()) - $prefixLength > 27) {
+				if ((!$sourceTable instanceof Table || !$sourceTable->hasColumn($thing->getName())) && \strlen($thing->getName()) - $prefixLength >37) {
 					throw new \InvalidArgumentException('Column name "'  . $table->getName() . '"."' . $thing->getName() . '" is too long.');
 				}
 			}
 
 			foreach ($table->getIndexes() as $thing) {
-				if ((!$sourceTable instanceof Table || !$sourceTable->hasIndex($thing->getName())) && \strlen($thing->getName()) - $prefixLength > 27) {
+				if ((!$sourceTable instanceof Table || !$sourceTable->hasIndex($thing->getName())) && \strlen($thing->getName()) - $prefixLength >37) {
 					throw new \InvalidArgumentException('Index name "'  . $table->getName() . '"."' . $thing->getName() . '" is too long.');
 				}
 			}
 
 			foreach ($table->getForeignKeys() as $thing) {
-				if ((!$sourceTable instanceof Table || !$sourceTable->hasForeignKey($thing->getName())) && \strlen($thing->getName()) - $prefixLength > 27) {
+				if ((!$sourceTable instanceof Table || !$sourceTable->hasForeignKey($thing->getName())) && \strlen($thing->getName()) - $prefixLength >37) {
 					throw new \InvalidArgumentException('Foreign key name "'  . $table->getName() . '"."' . $thing->getName() . '" is too long.');
 				}
 			}
@@ -544,7 +544,7 @@ class MigrationService {
 					$isUsingDefaultName = strtolower($defaultName) === $indexName;
 				}
 
-				if (!$isUsingDefaultName && \strlen($indexName) - $prefixLength > 27) {
+				if (!$isUsingDefaultName && \strlen($indexName) - $prefixLength >37) {
 					throw new \InvalidArgumentException('Primary index name  on "'  . $table->getName() . '" is too long.');
 				}
 				if ($isUsingDefaultName && \strlen($table->getName()) - $prefixLength > 23) {
@@ -554,7 +554,7 @@ class MigrationService {
 		}
 
 		foreach ($sequences as $sequence) {
-			if (!$sourceSchema->hasSequence($sequence->getName()) && \strlen($sequence->getName()) - $prefixLength > 27) {
+			if (!$sourceSchema->hasSequence($sequence->getName()) && \strlen($sequence->getName()) - $prefixLength >37) {
 				throw new \InvalidArgumentException('Sequence name "'  . $sequence->getName() . '" is too long.');
 			}
 		}

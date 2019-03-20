@@ -57,8 +57,8 @@ class DatabaseSchemaChecker {
 				$warnings[] = 'Database schema warning: *dbprefix* should only appear once in name of table ' . (string)$table->name;
 			}
 
-			if (strlen($tableName) > 27) {
-				$errors[] = 'Database schema error: Name of table ' . (string)$table->name . ' is too long (' . strlen($tableName) . '), max. 27 characters (21 characters for tables with autoincrement) + *dbprefix* allowed';
+			if (strlen($tableName) > 37) {
+				$errors[] = 'Database schema error: Name of table ' . (string)$table->name . ' is too long (' . strlen($tableName) . '), max. 37 characters (21 characters for tables with autoincrement) + *dbprefix* allowed';
 			}
 
 			$hasAutoIncrement = false;
@@ -79,7 +79,7 @@ class DatabaseSchemaChecker {
 					}
 
 					if (strlen($tableName) > 21) {
-						$errors[] = 'Database schema error: Name of table ' . (string)$table->name . ' is too long (' . strlen($tableName) . '), max. 27 characters (21 characters for tables with autoincrement) + *dbprefix* allowed';
+						$errors[] = 'Database schema error: Name of table ' . (string)$table->name . ' is too long (' . strlen($tableName) . '), max. 37 characters (21 characters for tables with autoincrement) + *dbprefix* allowed';
 					}
 
 					$hasAutoIncrement = true;
@@ -94,8 +94,8 @@ class DatabaseSchemaChecker {
 				}
 
 				$indexName = $hasPrefix === 0 ? substr((string)$index->name, strlen('*dbprefix*')) : (string)$index->name;
-				if (strlen($indexName) > 27) {
-					$errors[] = 'Database schema error: Name of index ' . (string)$index->name . ' on table ' . (string)$table->name . ' is too long (' . strlen($tableName) . '), max. 27 characters + *dbprefix* allowed';
+				if (strlen($indexName) > 37) {
+					$errors[] = 'Database schema error: Name of index ' . (string)$index->name . ' on table ' . (string)$table->name . ' is too long (' . strlen($tableName) . '), max. 37 characters + *dbprefix* allowed';
 				}
 			}
 		}
