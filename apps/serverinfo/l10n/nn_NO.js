@@ -1,0 +1,28 @@
+OC.L10N.register(
+    "serverinfo",
+    {
+    "Last minute" : "Siste minutt",
+    "Memory info not available" : "Minne informasjon ikkje tilgjengleg",
+    "Total" : "Totalt",
+    "Current usage" : "Nåverende bruk",
+    "Users" : "Brukarare",
+    "Groups" : "Grupper",
+    "Links" : "Lenker",
+    "Last 24 hours" : "Siste 24 timer",
+    "Last 1 hour" : "Siste time",
+    "Last 5 mins" : "Siste 5 minutt",
+    "Monitoring" : "Overvåker",
+    "Memory usage" : "Minne bruk",
+    "Active users" : "Aktive brukarare",
+    "Shares" : "Delingar",
+    "Storage" : "Lagring",
+    "Users:" : "Brukarare:",
+    "Files:" : "Filar:",
+    "Memory Limit:" : "Minne grense:",
+    "Upload max size:" : "Maks opplastning storleik:",
+    "Database" : "Database",
+    "Type:" : "Type:",
+    "Size:" : "Storleik:",
+    "External monitoring tool" : "Eksternt monoitor verktøy"
+},
+"nplurals=2; plural=(n != 1);");
