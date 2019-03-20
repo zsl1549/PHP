@@ -767,7 +767,7 @@ class Version13000Date20170718121200 extends SimpleMigrationStep {
 			]);
 			$table->setPrimaryKey(['id']);
 			$table->addIndex(['parent_id'], 'comments_parent_id_index');
-			$table->addIndex(['topmost_parent_id'], 'comments_topmost_parent_id_idx');
+			$table->addIndex(['topmost_parent_id'], 'comments_topmost_parent_id');
 			$table->addIndex(['object_type', 'object_id', 'creation_timestamp'], 'comments_object_index');
 			$table->addIndex(['actor_type', 'actor_id'], 'comments_actor_index');
 		}
