@@ -1,0 +1,5 @@
+tests/clover.xml
+*.spec
+*.tar.gz
+richdocuments.zip
+build/
