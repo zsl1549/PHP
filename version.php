@@ -1,5 +1,5 @@
 <?php 
-$OC_Version = array(16,0,0,8);
+$OC_Version = array(16,0,0,9);
 $OC_VersionString = '16.0.0 alpha 1';
 $OC_Channel = 'beta';
 $OC_VersionCanBeUpgradedFrom = array (
