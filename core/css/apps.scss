@@ -601,7 +601,8 @@ $min-content-width: $breakpoint-mobile - $navigation-width - $list-min-width;
 	min-height: 100%;
 	/* margin if navigation element is here */
 	#app-navigation:not(.hidden) + & {
-		margin-left: $navigation-width;
+		// margin-left: $navigation-width;
+		margin-left:0;
 	}
 	/* no top border for first settings item */
 	> .section:first-child {
